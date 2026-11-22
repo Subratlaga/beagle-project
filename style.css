@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+  --ink: #28251f;
+  --muted: #777166;
+  --accent: #b66b3d;
+  --paper: #f5f1e9;
+  --card: #fffdf9;
+  --line: #e9e1d5;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 48px 20px;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: 'DM Sans', Arial, sans-serif;
+  line-height: 1.75;
+}
+.page { width: min(760px, 100%); margin: 0 auto; }
+.section-card {
+  margin-bottom: 24px;
+  padding: 34px 40px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(62, 47, 29, .055);
+}
+.eyebrow {
+  margin: 0 0 7px;
+  color: var(--accent);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+h1, h2 { margin: 0; font-family: 'Playfair Display', Georgia, serif; line-height: 1.2; }
+h1 { margin-bottom: 17px; font-size: clamp(2.5rem, 7vw, 3.5rem); }
+h2 { font-size: 1.75rem; }
+.intro > p:not(.eyebrow) { margin: 0 0 17px; color: #514c43; }
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid #d9b69f;
+  transition: color .2s ease, border-color .2s ease;
+}
+.text-link:hover { color: #804421; border-color: currentColor; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.paw { font-size: 2rem; }
+figure { margin: 0 0 14px; }
+figure img {
+  display: block;
+  width: 100%;
+  max-height: 390px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #eee7dc;
+}
+figcaption { margin-top: 9px; color: var(--muted); font-size: .83rem; font-style: italic; }
+.trivia ol { margin: 18px 0 0; padding-left: 24px; }
+.trivia li { padding: 5px 0 5px 7px; color: #514c43; }
+.trivia li::marker { color: var(--accent); font-weight: 700; }
+footer { padding: 5px 0 0; color: var(--muted); font-size: .82rem; text-align: center; }
+footer span { color: var(--accent); }
+
+@media (max-width: 560px) {
+  body { padding: 22px 13px; }
+  .section-card { padding: 25px 22px; border-radius: 14px; }
+  h2 { font-size: 1.5rem; }
+}
